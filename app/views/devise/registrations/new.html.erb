@@ -3,26 +3,27 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
 
   <div class="field">
     <%= f.label :primer_nombre %><br />
-    <%= f.email_field :primer_nombre%>
+    <%= f.text_field :primer_nombre%>
   </div>
 
   <div class="field">
     <%= f.label :primer_apellido %><br />
-    <%= f.email_field :primer_apellido %>
+    <%= f.text_field :primer_apellido %>
   </div>
 
   <div class="field">
     <%= f.label :nombre_perfil %><br />
-    <%= f.email_field :nombre_perfil %>
+    <%= f.text_field :nombre_perfil %>
   </div>
 
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+  
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
